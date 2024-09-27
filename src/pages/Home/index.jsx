@@ -60,7 +60,7 @@ export const Home = () => {
       <Navbar />
       {/* ------------------------------------------------------------------- */}
       {/* Hero Section */}
-      <section className="relative w-full h-[80vh] bg-cover bg-center" style={{ backgroundImage: 'url("https://res.cloudinary.com/da1sagzgc/image/upload/v1727470224/hero_etugac.jpg")' }}>
+      <section className="relative w-full h-[80vh] bg-cover bg-center px-2" style={{ backgroundImage: 'url("https://res.cloudinary.com/da1sagzgc/image/upload/v1727470224/hero_etugac.jpg")' }}>
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-70"></div>
 
