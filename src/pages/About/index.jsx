@@ -7,10 +7,6 @@ import { WhyChooseUsSection } from "@/components/Choose";
 export const About = () => {
   return (
    <>
-   {/* Topbar */}
-   <Topbar/>
-   {/* navbar */}
-   <Navbar/>
 
     {/* body of about page */}
     <div>
@@ -113,7 +109,6 @@ export const About = () => {
     </div>
 
    {/* footer */}
-   <Footer/>
    </>
   )
 }

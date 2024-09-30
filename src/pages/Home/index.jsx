@@ -24,11 +24,7 @@ export const Home = () => {
   return (
     <>
       {/* top bar */}
-        <Topbar/>
-      {/* end of topbar */}
-      {/* -------------------------------------------------------------------- */}
-      {/* beginning of navbar */}
-      <Navbar />
+        
       {/* ------------------------------------------------------------------- */}
       {/* Hero Section */}
       <section className="relative w-full h-[80vh] bg-cover bg-center px-2" style={{ backgroundImage: 'url("https://res.cloudinary.com/da1sagzgc/image/upload/v1727470224/hero_etugac.jpg")' }}>
@@ -43,8 +39,8 @@ export const Home = () => {
           Welcome to Vision Africa Group
         </h1>
         <p className="mt-4 text-lg md:text-xl max-w-2xl">
-          Your trusted importers and distributors of high-quality electronics
-          and electrical appliances in Nigeria
+        Your trusted name in impprtation and distribution of high-quality electronics and electrical products in Nigeria since 2008.
+
         </p>
         
         <div className="mt-6 flex items-center justify-center gap-5">
@@ -146,7 +142,7 @@ export const Home = () => {
     {/* why choose us */}
     <WhyChooseUsSection/>
     <FAQ/>
-    <Footer/>
+ 
     </>
   );
 };
