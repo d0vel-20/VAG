@@ -108,7 +108,7 @@ export const Navbar = () => {
               )}
             </li>
 
-            <li><a href="#" className="hover:text-gray-600">Products</a></li>
+            <li><Link to="/product" className="hover:text-gray-600">Products</Link></li>
             <li><a href="#" className="hover:text-gray-600">FAQ</a></li>
             <li><a href="#" className="hover:text-gray-600">Blog</a></li>
 

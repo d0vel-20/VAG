@@ -61,8 +61,8 @@ export const Home = () => {
 
     <div className="max-w-7xl mx-auto p-6">
       <h2 className="text-2xl font-bold mb-6">Latest Products</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-        {products.slice(0, 10).map((product) => (
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        {products.slice(0, 5).map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
