@@ -38,8 +38,8 @@ export const Home = () => {
         <h1 className="text-4xl md:text-6xl font-bold leading-tight">
           Welcome to Vision Africa Group
         </h1>
-        <p className="mt-4 text-lg md:text-xl max-w-2xl">
-        Your trusted name in impprtation and distribution of high-quality electronics and electrical products in Nigeria since 2008.
+        <p className="mt-4 text-[px] md:text-lg max-w-2xl">
+        Your trusted name in impprtation and distribution of high-quality electronics and electrical products in Nigeria since 2008. <br /> At vision Africa group we pride ourselves of being leading suppliers of the latest innovation of electronics and electrical appliances
 
         </p>
         
@@ -61,8 +61,8 @@ export const Home = () => {
 
     <div className="max-w-7xl mx-auto p-6">
       <h2 className="text-2xl font-bold mb-6">Latest Products</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {products.map((product) => (
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        {products.slice(0, 10).map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>

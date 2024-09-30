@@ -1,31 +1,102 @@
 export const products = [
     { 
-      id: 1, 
-      name: 'Product 1', 
+      id: 0, 
+      name: 'Air Conditioner', 
       price: 29.99, 
       date: '2024-10-01', 
-      image: 'https://via.placeholder.com/150' 
+      image: 'https://via.placeholder.com/150' ,
+      brand: 'LG',
+      category: 'Air Conditioners'
+    },
+    { 
+      id: 1, 
+      name: 'Surveillance Camera', 
+      price: 19.99, 
+      date: '2024-10-02', 
+      image: 'https://via.placeholder.com/150',
+      brand: 'Samsung',
+      category: 'Surveillance Cameras'
     },
     { 
       id: 2, 
-      name: 'Product 2', 
-      price: 19.99, 
-      date: '2024-10-02', 
-      image: 'https://via.placeholder.com/150' 
+      name: 'Television', 
+      price: 49.99, 
+      date: '2024-10-03', 
+      image: 'https://via.placeholder.com/150',
+      brand: 'Sony',
+      category: 'Electronics'
     },
     { 
       id: 3, 
-      name: 'Product 3', 
+      name: 'Laptop', 
       price: 49.99, 
       date: '2024-10-03', 
-      image: 'https://via.placeholder.com/150' 
+      image: 'https://via.placeholder.com/150',
+      brand: 'Dell',
+      category: 'Electronics'
     },
     { 
       id: 4, 
-      name: 'Product 4', 
+      name: 'Laptop', 
       price: 49.99, 
       date: '2024-10-03', 
-      image: 'https://via.placeholder.com/150' 
+      image: 'https://via.placeholder.com/150',
+      brand: 'Dell',
+      category: 'Air Conditioners'
+    },
+    { 
+      id: 5, 
+      name: 'Laptop', 
+      price: 49.99, 
+      date: '2024-10-03', 
+      image: 'https://via.placeholder.com/150',
+      brand: 'Dell',
+      category: 'Air Conditioners'
+    },
+    { 
+      id: 6, 
+      name: 'Laptop', 
+      price: 49.99, 
+      date: '2024-10-03', 
+      image: 'https://via.placeholder.com/150',
+      brand: 'Dell',
+      category: 'Surveillance Camera'
+    },
+    { 
+      id: 7, 
+      name: 'Laptop', 
+      price: 49.99, 
+      date: '2024-10-03', 
+      image: 'https://via.placeholder.com/150',
+      brand: 'Dell',
+      category: 'Electronics'
+    },
+    { 
+      id: 8, 
+      name: 'Laptop', 
+      price: 49.99, 
+      date: '2024-10-03', 
+      image: 'https://via.placeholder.com/150',
+      brand: 'Dell',
+      category: 'Surveillance Camera'
+    },
+    { 
+      id: 9, 
+      name: 'Laptop', 
+      price: 49.99, 
+      date: '2024-10-03', 
+      image: 'https://via.placeholder.com/150',
+      brand: 'Dell',
+      category: 'Electronics'
+    },
+    { 
+      id: 10, 
+      name: 'Laptop', 
+      price: 49.99, 
+      date: '2024-10-03', 
+      image: 'https://via.placeholder.com/150',
+      brand: 'Dell',
+      category: 'Electronics'
     },
 ];
 

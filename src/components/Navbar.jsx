@@ -52,7 +52,7 @@ export const Navbar = () => {
               </ul>
             </li>
 
-            <li><a href="#" className="hover:text-accentColor">Products</a></li>
+            <li><Link to="/product" className="hover:text-accentColor">Products</Link></li>
             <li><a href="#" className="hover:text-accentColor">FAQ</a></li>
             <li><a href="#" className="hover:text-accentColor">Blog</a></li>
 

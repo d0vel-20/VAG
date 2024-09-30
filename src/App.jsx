@@ -9,6 +9,7 @@ import { Footer } from '@/components/Footer';
 import { Navbar } from '@/components/Navbar';
 import { Topbar } from '@/components/Topbar';
 import { WhatsAppButton } from './components/Whatsapp';
+import { ProductPage } from './pages/Products';
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/product" element={<ProductPage />} />
         <Route path="*" element={<Navigate to="/"/>} />
       </Routes>
       <Footer/>
