@@ -1,7 +1,13 @@
 import { useState } from 'react';
 import {Link } from 'react-router-dom'
+import {useActiveLink} from '@/utils/useActiveLink';
 
 export const Navbar = () => {
+
+  const isHomeActive = useActiveLink('/');
+  const isAboutActive = useActiveLink('/about');
+
+
   const [isOpen, setIsOpen] = useState(false);
   const [showSolutions, setShowSolutions] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
@@ -27,10 +33,14 @@ export const Navbar = () => {
         {/* Desktop Nav Links */}
         <div className="hidden md:flex items-center space-x-8">
           <ul className="flex space-x-8 text-gray-800">
-          <li><Link to="/" className="hover:text-accentColor">Home</Link></li>
+          <li><Link to="/" className={`${
+                isHomeActive
+                    ? 'text-accentColor'
+                    : 'text-gray-800 '
+                }`}>Home</Link></li>
             {/* Solutions with dropdown */}
             <li className="group relative">
-              <Link to="/about" className="hover:text-accentColor flex items-center">
+              <Link to="/" className="hover:text-accentColor flex items-center">
                 Solutions
                 <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
@@ -48,7 +58,11 @@ export const Navbar = () => {
 
             {/* About with dropdown */}
             <li className="group relative">
-              <Link to="/about" className="hover:text-accentColor flex items-center">
+              <Link to="/about"  className={`${
+                isAboutActive
+                    ? 'text-accentColor flex items-center'
+                    : 'text-gray-800 flex items-center '
+                }`}>
                 About
                 <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
