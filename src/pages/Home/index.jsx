@@ -6,54 +6,25 @@ import {Link } from 'react-router-dom'
 import { Search } from "@/components/Search";
 import { WhyChooseUsSection } from "@/components/Choose";
 import { Footer } from "@/components/Footer";
+import { products } from "@/data/data";
+import { categories } from "@/data/data";
+import ProductCard from "@/components/Product";
+import CountdownTimer from "@/components/Countdown";
+import { flashSaleProducts } from "@/data/data";
+import { Topbar } from "@/components/Topbar";
+import { blogs } from "@/data/data";
+import { BlogCard } from "@/components/Blogcard";
+import { FAQ } from "@/components/Faq";
 
 
-const categories = [
-  { name: 'Air Conditioners', img: 'https://res.cloudinary.com/da1sagzgc/image/upload/v1727474789/aircon_uqvnl5.jpg' },
-  { name: 'Surveillance Cameras', img: 'https://res.cloudinary.com/da1sagzgc/image/upload/v1727474789/surve_gseicj.jpg' },
-  { name: 'General Electronics', img: 'https://res.cloudinary.com/da1sagzgc/image/upload/v1727474789/geapple_hggdjw.jpg' },
-  { name: 'Solar Power', img: 'https://res.cloudinary.com/da1sagzgc/image/upload/v1727475747/solar_ztnuwv.png' },
-  { name: 'Smart Tv', img: 'https://res.cloudinary.com/da1sagzgc/image/upload/v1727475740/smart_ojjwvx.png' },
-  { name: 'Sewing Machines', img: 'https://res.cloudinary.com/da1sagzgc/image/upload/v1727475738/sewing_f5sygg.jpg' }
-];
+
+const flashSaleEndTime = '2024-10-01T23:59:59';
 
 export const Home = () => {
   return (
     <>
       {/* top bar */}
-      <header className="flex items-center  justify-between w-full h-[60px] bg-primaryColor px-5">
-        <div className="flex items-center justify-center gap-2 text-dividerColor">
-          <a
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFacebook />
-          </a>
-          <a
-            href="https://www.twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaTwitter />
-          </a>
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram />
-          </a>
-        </div>
-        <div className="flex items-center justify-center gap-[8px]">
-          <div className="w-[100px] h-[30px] border-2 rounded-md bg-highlightColor border-highlightColor text-textColor flex items-center justify-center">
-            Sign In
-          </div>
-          <div className=" w-[130px] h-[30px] flex items-center justify-center rounded-md text-textColor bg-accentColor">
-            Getting Started
-          </div>
-        </div>
-      </header>
+        <Topbar/>
       {/* end of topbar */}
       {/* -------------------------------------------------------------------- */}
       {/* beginning of navbar */}
@@ -65,7 +36,7 @@ export const Home = () => {
       <div className="absolute inset-0 bg-black opacity-70"></div>
 
       
-      
+      {/* ================================================================================== */}
       {/* Content */}
       <div className="relative flex flex-col items-center justify-center h-full text-center text-white">
         <h1 className="text-4xl md:text-6xl font-bold leading-tight">
@@ -86,10 +57,38 @@ export const Home = () => {
         </div>
         <Search/>
       </div>
-
-      
     </section>
 
+{/* ==================================================================================== */}
+
+    {/* Latest Products */}
+
+    <div className="max-w-7xl mx-auto p-6">
+      <h2 className="text-2xl font-bold mb-6">Latest Products</h2>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
+    </div>
+
+    {/* ===================================================================================== */}
+
+        {/* flash sale */}
+        <div className="max-w-7xl mx-auto p-6 bg-highlightColor rounded-lg shadow-lg">
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="text-2xl font-bold">Limited Time Flash Sale!</h2>
+        <CountdownTimer endTime={flashSaleEndTime} />
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {flashSaleProducts.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
+    </div>
+
+        {/* ============================================================================= */}
+    {/* EXplore */}
     <section className="py-16 bg-secondaryColor">
       <div className="container mx-auto px-4">
         {/* Section Title */}
@@ -120,8 +119,33 @@ export const Home = () => {
       </div>
     </section>
 
+    {/* ======================================================================================== */}
+    {/* blog section */}
+
+    <section className="py-12 px-6 md:px-12 bg-primaryColor">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-4xl font-bold mb-8 text-center text-textColor">Latest Blogs</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {blogs.map((blog) => (
+            <BlogCard
+              key={blog.id}
+              id={blog.id}
+              title={blog.title}
+              description={blog.description}
+              date={blog.date}
+              image={blog.image}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ============================================== */}
+   
+
     {/* why choose us */}
     <WhyChooseUsSection/>
+    <FAQ/>
     <Footer/>
     </>
   );
